@@ -1,0 +1,10 @@
+build
+lib
+dist
+coverage
+node_modules
+.*.bak
+.*.swp
+npm-debug.log
+.DS_Store
+.*lock

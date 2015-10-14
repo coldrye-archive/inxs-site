@@ -1,0 +1,13 @@
+{
+  "name": "inxs-site",
+  "private": true,
+  "devDependencies": {
+    "marked": "~0.2.8",
+    "shelljs": "~0.1.4",
+    "underscore": "~1.4.4"
+  },
+  "globalDevDependencies": {
+    "bower": "^1.5.3",
+    "wintersmith": "^2.2.1"
+  }
+}

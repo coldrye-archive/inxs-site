@@ -1,0 +1,22 @@
+{
+  "output": "../dist",
+  "locals": {
+    "url": "http://inxs.es.coldrye.eu/",
+    "description": "Extensible Dependency Injection Framework",
+    "title": "inxs",
+    "keywords": [
+      "babel", "es6", "extensible", "dependency injection",
+      "framework", "node.js", "browser"
+    ]
+  },
+  "require": {
+    "_": "underscore",
+    "util": "util",
+    "marked": "marked"
+  },
+  "plugins": [
+  ],
+  "jade": {
+    "pretty": true
+  }
+}
