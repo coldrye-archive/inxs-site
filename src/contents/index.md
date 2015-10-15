@@ -140,6 +140,7 @@ very similar to the above with the difference being that we are now limited
 to static property injection, only.
 
 <pre class="prettyprint lang-javascript">
+import inject from './broker';
 
 class MyApp
 {
