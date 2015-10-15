@@ -1,5 +1,15 @@
+header,
+footer,
+section,
+aside,
+main
+{
+    display: block;
+}
+
 body
 {
+    font-family: 'Open Sans', sans-serif;
     font-size: 12pt;
     margin: 0;
     background-color: #efe;
@@ -24,7 +34,7 @@ header.page nav.global
 
 header.page nav.global a
 {
-    margin-right: 2em;
+    margin-left: 2em;
     font-size: .8em;
 }
 
@@ -105,6 +115,15 @@ main.page aside ul li a span
     padding-top: .3em;
 }
 
+main.page p a:before
+{
+    content: '\2192';
+}
+
+code
+{
+    font-style: italic;
+}
 
 pre.prettyprint
 {

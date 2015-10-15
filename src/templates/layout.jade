@@ -1,8 +1,8 @@
 doctype html
 html(lang='en')
     head
-    block head
         meta(charset='utf-8')
+        meta(name='X-UA-Compatible', content='IE=edge')
         meta(name='viewport', content='width=device-width')
         meta(name='description', content=locals.description)
         meta(name='keywords', content=locals.keywords.join(','))
@@ -10,8 +10,11 @@ html(lang='en')
         meta(property='og:url', content=locals.url)
         meta(property='og:description', content=locals.description)
         meta(property='og:type', content='website')
-        link(rel='icon', href='images/favicon.png')
+        link(rel='icon', href='/favicon.png' type='image/png')
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic', rel='stylesheet', type='text/css')
         title= locals.title + ' - ' + locals.description
+        script(type='text/javascript') window.html5 = {shivCSS:true};
+        script(src='/javascript/html5shiv/dist/html5shiv.min.js')
         block head-js
         block head-css
         link(rel='stylesheet', type='text/css', href=contents.stylesheets['site.css'].url)

@@ -53,7 +53,7 @@ bower:
 # internal
 build-assets: $(build_dir)/contents/images/
 	@echo "gathering assets..."
-	@cp ../inxs-artwork/dist/favicon.png $(build_dir)/contents/images/
+	@cp ../inxs-artwork/dist/favicon.png $(build_dir)/contents/
 	@cp ../inxs-artwork/dist/logo-60x80.png $(build_dir)/contents/images/logo.png
 
 
