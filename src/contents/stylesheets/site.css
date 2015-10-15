@@ -12,7 +12,7 @@ body
     font-family: 'Open Sans', sans-serif;
     font-size: 12pt;
     margin: 0;
-    background-color: #efe;
+    background-color: #fefefe;
 }
 
 header.page,
@@ -129,6 +129,6 @@ pre.prettyprint
 {
     font-size: 10pt;
     border: 0;
-    background-color: #fff;
+    background-color: #efefef;
 }
 
