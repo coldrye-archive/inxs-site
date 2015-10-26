@@ -2,9 +2,9 @@
   "name": "inxs-site",
   "private": true,
   "devDependencies": {
-    "marked": "~0.2.8",
-    "shelljs": "~0.1.4",
-    "underscore": "~1.4.4"
+    "marked": ">=0.3.5",
+    "shelljs": ">=0.5.3",
+    "underscore": ">=1.8.3"
   },
   "globalDevDependencies": {
     "bower": "^1.5.3",
