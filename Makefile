@@ -108,7 +108,7 @@ deps-global:
 				deps.push(version); \
 			} \
 			else { \
-				deps.push(key + '@' + version); \
+				deps.push('\"' + key + '@' + version + '\"'); \
 			} \
 		} \
 		console.log(deps.join(' ')); \
