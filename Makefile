@@ -18,9 +18,8 @@
 build_dir       = ./build
 dist_dir        = ./dist
 src_dir         = ./src
-artwork_dir     = ../inxs-artwork/dist
-inxs_project_dir        = ../inxs
-inxs_common_project_dir = ../inxs-common
+
+include Makefile.conf
 
 
 .PHONY: dist build-assets build-externals build-src \
@@ -51,27 +50,26 @@ bower:
 
 
 # internal
-build-assets: $(build_dir)/contents/images/
+build-assets:
 	@echo "gathering assets..."
-	@cp ../inxs-artwork/dist/favicon.png $(build_dir)/contents/
-	@cp ../inxs-artwork/dist/logo-60x80.png $(build_dir)/contents/images/logo.png
-
-
-$(build_dir)/contents/images/:
-	mkdir -p $(build_dir)/contents/images
+	@if [ ! -z "$(artwork_dir)" ]; then \
+		mkdir -p $(build_dir)/contents/images; \
+		cp $(artwork_dir)/dist/favicon.png $(build_dir)/contents/; \
+		cp $(artwork_dir)/dist/logo.png $(build_dir)/contents/images/logo.png; \
+	fi
 
 
 # internal
 build-externals:
 	@echo "building externals..."
-	@make -C ../inxs cover doc devdoc
-	@make -C ../inxs-common cover devdoc
-	@mkdir -p $(build_dir)/contents/projects/inxs
-	@mkdir -p $(build_dir)/contents/projects/inxs-common
-	@cp -a ../inxs/build/doc build/contents/projects/inxs/doc
-	@cp -a ../inxs/build/cover build/contents/projects/inxs/cover
-	@cp -a ../inxs-common/build/doc build/contents/projects/inxs-common/doc
-	@cp -a ../inxs-common/build/cover build/contents/projects/inxs-common/cover
+	@for pdir in $(project_dirs); do \
+		echo $$pdir; \
+		lpdir=$$(basename $$pdir); \
+		make -C $$pdir cover doc; \
+		mkdir -p $(build_dir)/contents/projects/$$lpdir; \
+		cp -a $$pdir/build/doc build/contents/projects/$$lpdir/doc; \
+		cp -a $$pdir/build/cover build/contents/projects/$$lpdir/cover; \
+	done
 
 
 # cleans both the build and dist directory 

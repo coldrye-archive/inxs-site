@@ -3,7 +3,7 @@ template: project.jade
 order: 1
 cover: true
 docs:
-  public: false
+  public: false 
   dev: true
 ---
 
@@ -14,7 +14,7 @@ docs:
 The developer API documentation is provided for all who need to to implement
 their own injector suites.
 
-For starters, take a look at the [default injector suite](../inxs/doc/dev/file/src/impl.es.html) of inxs.
+For starters, take a look at the [default injector suite](../inxs/doc/dev/file/src/impl.es.html) of ``inxs``.
 
 ### Test Coverage
 

@@ -1,6 +1,6 @@
 server {
         listen 109.239.58.218:80;
-        root /var/www/sites/projects/inxs;
+        root /var/www/sites/inxs.es.coldrye.eu;
         index index.html;
         server_name inxs.es.coldrye.eu;
         location / {
